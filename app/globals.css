@@ -65,10 +65,10 @@ body {
 
 @keyframes flow-dash {
   from {
-    stroke-dashoffset: 218;
+    stroke-dashoffset: 940;
   }
   to {
-    stroke-dashoffset: -218;
+    stroke-dashoffset: -940;
   }
 }
 

@@ -15,9 +15,17 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-5xl px-6 pb-20 pt-28 sm:pt-36">
         <div className="relative">
-          <FloatingNode className="left-0 top-2 hidden sm:flex" />
-          <FloatingNode className="right-0 top-2 hidden sm:flex" />
-          <ConnectorLine className="left-6 top-14 hidden h-20 w-44 sm:block" />
+          <ConnectorLine />
+          <FloatingNode type="laptop" className="left-0 top-2 hidden sm:flex" />
+          <FloatingNode type="phone" className="right-0 top-2 hidden sm:flex" />
+          <FloatingNode
+            type="chip"
+            className="-left-6 top-116 hidden -translate-y-1/2 sm:flex lg:-left-16"
+          />
+          <FloatingNode
+            type="server"
+            className="-right-6 top-116 hidden -translate-y-1/2 sm:flex lg:-right-16"
+          />
 
           <div className="flex flex-col items-center text-center">
             <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-ink/15 bg-paper-soft px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-ink/70">
@@ -55,8 +63,6 @@ export default function Hero() {
             </div>
 
             <div className="relative mt-20 flex justify-center">
-              <FloatingNode className="-left-6 top-1/2 hidden -translate-y-1/2 sm:flex lg:-left-16" />
-              <FloatingNode className="-right-6 top-1/2 hidden -translate-y-1/2 sm:flex lg:-right-16" />
               <DeployTerminal />
             </div>
           </div>
