@@ -38,7 +38,7 @@ const PROJECTS: Project[] = [
   },
   {
     name: "Ganadería Berlín",
-    icon: "cattle",
+    icon: "marketplace",
     status: "En desarrollo",
     description:
       "Marketplace privado para comercialización de ganado bovino de registro, genética e insumos.",

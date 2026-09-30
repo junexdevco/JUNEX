@@ -3,7 +3,7 @@ import NodeIcon, { type NodeIconType } from "@/components/NodeIcon";
 const PRODUCTS: { name: string; icon: NodeIconType }[] = [
   { name: "AquaRural", icon: "water" },
   { name: "Asogacentro", icon: "cattle" },
-  { name: "Ganadería Berlín", icon: "cattle" },
+  { name: "Ganadería Berlín", icon: "marketplace" },
   { name: "San.tv", icon: "broadcast" },
 ];
 

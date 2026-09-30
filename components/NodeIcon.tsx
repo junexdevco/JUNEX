@@ -5,6 +5,7 @@ export type NodeIconType =
   | "server"
   | "water"
   | "cattle"
+  | "marketplace"
   | "education"
   | "broadcast";
 
@@ -64,6 +65,16 @@ export default function NodeIcon({ type }: { type: NodeIconType }) {
           <circle cx="9.7" cy="11.5" r="0.9" fill="currentColor" stroke="none" />
           <circle cx="14.3" cy="11.5" r="0.9" fill="currentColor" stroke="none" />
           <path d="M10.3 14.5h3.4" {...common} />
+        </svg>
+      );
+    case "marketplace":
+      return (
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-ink" aria-hidden="true">
+          <path
+            d="M13.3 3.5 20.5 10.7a1.8 1.8 0 0 1 0 2.5l-6.3 6.3a1.8 1.8 0 0 1-2.5 0L4.5 12.2V6a2.5 2.5 0 0 1 2.5-2.5h6.3Z"
+            {...common}
+          />
+          <circle cx="9.3" cy="8.3" r="1.1" fill="currentColor" stroke="none" />
         </svg>
       );
     case "education":
