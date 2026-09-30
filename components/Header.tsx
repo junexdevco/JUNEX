@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 const NAV_LINKS = [
   { label: "Servicios", href: "#servicios" },
   { label: "Producto", href: "#producto" },
@@ -6,8 +10,23 @@ const NAV_LINKS = [
 ];
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-black/10 bg-paper/90 backdrop-blur">
+    <header
+      className={`sticky top-0 z-50 transition-colors duration-300 ${
+        scrolled
+          ? "border-b border-black/10 bg-paper/90 backdrop-blur"
+          : "border-b border-transparent bg-paper"
+      }`}
+    >
       <div className="mx-auto grid max-w-6xl grid-cols-2 items-center gap-4 px-6 py-4 md:grid-cols-[minmax(min-content,14rem)_auto_14rem]">
         <a href="#top" className="flex items-center gap-2">
           <span className="font-display text-2xl tracking-wide text-ink">
