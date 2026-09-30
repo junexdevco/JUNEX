@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import AdminLoginModal from "@/components/AdminLoginModal";
 
 const NAV_LINKS = [
   { label: "Servicios", href: "#servicios" },
@@ -12,6 +13,7 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -48,12 +50,13 @@ export default function Header() {
         </nav>
 
         <div className="flex justify-end gap-3">
-          <a
-            href="#contacto"
+          <button
+            type="button"
+            onClick={() => setLoginOpen(true)}
             className="hidden items-center whitespace-nowrap rounded-full border border-ink/15 px-4 py-2 font-mono text-sm text-ink transition-colors hover:border-ink/40 md:flex"
           >
             Iniciar sesión
-          </a>
+          </button>
           <a
             href="#contacto"
             className="flex items-center whitespace-nowrap rounded-full bg-ink px-4 py-2 font-mono text-sm text-paper transition-colors hover:bg-ink-soft"
@@ -62,6 +65,8 @@ export default function Header() {
           </a>
         </div>
       </div>
+
+      <AdminLoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
     </header>
   );
 }
