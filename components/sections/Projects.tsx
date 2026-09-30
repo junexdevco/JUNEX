@@ -3,7 +3,7 @@ import NodeIcon, { type NodeIconType } from "@/components/NodeIcon";
 type Project = {
   name: string;
   icon: NodeIconType;
-  status: "En producción" | "En desarrollo" | "En propuesta";
+  status: "En producción" | "En desarrollo";
   description: string;
   highlights: string[];
   stack: string;
@@ -62,25 +62,11 @@ const PROJECTS: Project[] = [
     ],
     stack: "JavaScript · Firebase · Vercel",
   },
-  {
-    name: "EduOnePro",
-    icon: "education",
-    status: "En propuesta",
-    description:
-      "Plataforma de gestión académica, pastoral y comunicación escolar en evaluación con un colegio privado del Huila.",
-    highlights: [
-      "Seguimiento formativo y alertas tempranas (semáforo académico)",
-      "Agenda escolar digital y módulo de orientación vocacional",
-      "Modelo de membresías familiares con pagos PSE/Nequi/Daviplata",
-    ],
-    stack: "Web + App móvil (en definición)",
-  },
 ];
 
 const STATUS_STYLES: Record<Project["status"], string> = {
   "En producción": "bg-accent/20 text-ink",
   "En desarrollo": "bg-ink/10 text-ink/70",
-  "En propuesta": "border border-ink/15 text-ink/50",
 };
 
 export default function Projects() {
