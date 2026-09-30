@@ -75,7 +75,7 @@ const STATUS_STYLES: Record<Project["status"], string> = {
 
 export default function Projects() {
   return (
-    <section id="proyectos" className="bg-paper px-6 py-24">
+    <section id="proyectos" className="bg-paper-soft px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <span className="font-mono text-xs uppercase tracking-widest text-ink/50">
           Casos reales
@@ -90,7 +90,7 @@ export default function Projects() {
 
         <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2">
           {PROJECTS.map((project) => (
-            <article key={project.name} className="flex flex-col bg-paper-soft p-8">
+            <article key={project.name} className="flex flex-col bg-paper p-8">
               <div className="flex items-start justify-between gap-4">
                 <span className="font-mono text-sm text-accent">
                   {project.tag}
@@ -103,7 +103,7 @@ export default function Projects() {
               </div>
 
               <div className="mt-4 flex items-center gap-3">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-ink/10 bg-paper">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-ink/10 bg-paper-soft">
                   <NodeIcon type={project.icon} />
                 </span>
                 <h3 className="font-display text-2xl text-ink">

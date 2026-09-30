@@ -7,7 +7,10 @@ const POINTS = [
 
 export default function Enterprise() {
   return (
-    <section id="enterprise" className="bg-paper px-6 py-24">
+    <section
+      id="enterprise"
+      className="border-t border-ink/10 bg-paper px-6 py-24"
+    >
       <div className="mx-auto max-w-5xl">
         <h2 className="font-display text-4xl leading-tight text-ink sm:text-5xl">
           Listos para acompañar a empresas en crecimiento.
