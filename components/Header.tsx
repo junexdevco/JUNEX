@@ -27,7 +27,7 @@ export default function Header() {
           : "border-b border-transparent bg-paper"
       }`}
     >
-      <div className="mx-auto grid max-w-6xl grid-cols-2 items-center gap-4 px-6 py-4 md:grid-cols-[minmax(min-content,14rem)_auto_14rem]">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 items-center gap-4 px-6 py-4 md:grid-cols-[minmax(min-content,14rem)_auto_minmax(min-content,18rem)]">
         <a href="#top" className="flex items-center gap-2">
           <span className="font-display text-2xl tracking-wide text-ink">
             JUNEX
@@ -49,13 +49,13 @@ export default function Header() {
         <div className="flex justify-end gap-3">
           <a
             href="#contacto"
-            className="hidden items-center rounded-full border border-ink/15 px-4 py-2 font-mono text-sm text-ink transition-colors hover:border-ink/40 md:flex"
+            className="hidden items-center whitespace-nowrap rounded-full border border-ink/15 px-4 py-2 font-mono text-sm text-ink transition-colors hover:border-ink/40 md:flex"
           >
             Iniciar sesión
           </a>
           <a
             href="#contacto"
-            className="flex items-center rounded-full bg-ink px-4 py-2 font-mono text-sm text-paper transition-colors hover:bg-ink-soft"
+            className="flex items-center whitespace-nowrap rounded-full bg-ink px-4 py-2 font-mono text-sm text-paper transition-colors hover:bg-ink-soft"
           >
             Hablemos
           </a>
