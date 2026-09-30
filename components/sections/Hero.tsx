@@ -1,4 +1,8 @@
 import Globe from "@/components/Globe";
+import Typewriter from "@/components/Typewriter";
+import ProductsBanner from "@/components/ProductsBanner";
+
+const ROTATING_WORDS = ["necesita", "escala", "convierte", "conecta"];
 
 export default function Hero() {
   return (
@@ -15,7 +19,9 @@ export default function Hero() {
           Construimos el software
           <br />
           que tu negocio{" "}
-          <span className="bg-accent px-2 text-ink">necesita</span>
+          <span className="inline-block translate-y-[0.1em] bg-accent px-2 py-1 leading-[0.95] text-ink">
+            <Typewriter words={ROTATING_WORDS} />
+          </span>
         </h1>
 
         <p className="mt-8 max-w-2xl text-lg text-ink/70 sm:text-xl">
@@ -48,6 +54,8 @@ export default function Hero() {
             Infraestructura desplegada globalmente
           </span>
         </div>
+
+        <ProductsBanner />
       </div>
     </section>
   );
