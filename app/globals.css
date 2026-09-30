@@ -62,3 +62,22 @@ body {
 .bg-glow-accent {
   background: radial-gradient(60% 50% at 50% 0%, var(--color-accent-soft) 0%, transparent 70%);
 }
+
+@keyframes flow-dash {
+  from {
+    stroke-dashoffset: 218;
+  }
+  to {
+    stroke-dashoffset: -218;
+  }
+}
+
+.animate-flow {
+  animation: flow-dash 2.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flow {
+    animation: none;
+  }
+}
