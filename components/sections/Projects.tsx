@@ -9,8 +9,9 @@ type Project = {
   stack: string;
 };
 
-const PROJECTS: Project[] = [
+const PROJECTS: (Project & { tag: string })[] = [
   {
+    tag: "01",
     name: "AquaRural Pro",
     icon: "water",
     status: "En producción",
@@ -24,6 +25,7 @@ const PROJECTS: Project[] = [
     stack: "Node.js · MongoDB · React · React Native",
   },
   {
+    tag: "02",
     name: "Asogacentro",
     icon: "cattle",
     status: "En producción",
@@ -37,6 +39,7 @@ const PROJECTS: Project[] = [
     stack: "Node.js · MongoDB · React · React Native · Firebase",
   },
   {
+    tag: "03",
     name: "Ganadería Berlín",
     icon: "marketplace",
     status: "En desarrollo",
@@ -50,6 +53,7 @@ const PROJECTS: Project[] = [
     stack: "Next.js · Node.js · MongoDB · Wompi",
   },
   {
+    tag: "04",
     name: "San.tv",
     icon: "broadcast",
     status: "En producción",
@@ -84,21 +88,13 @@ export default function Projects() {
           mockups.
         </p>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
+        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2">
           {PROJECTS.map((project) => (
-            <article
-              key={project.name}
-              className="flex flex-col rounded-2xl border border-ink/10 bg-paper-soft p-6"
-            >
+            <article key={project.name} className="flex flex-col bg-paper-soft p-8">
               <div className="flex items-start justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-ink/10 bg-paper">
-                    <NodeIcon type={project.icon} />
-                  </span>
-                  <h3 className="font-display text-xl text-ink">
-                    {project.name}
-                  </h3>
-                </div>
+                <span className="font-mono text-sm text-accent">
+                  {project.tag}
+                </span>
                 <span
                   className={`shrink-0 whitespace-nowrap rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-wider ${STATUS_STYLES[project.status]}`}
                 >
@@ -106,7 +102,18 @@ export default function Projects() {
                 </span>
               </div>
 
-              <p className="mt-4 text-sm text-ink/65">{project.description}</p>
+              <div className="mt-4 flex items-center gap-3">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-ink/10 bg-paper">
+                  <NodeIcon type={project.icon} />
+                </span>
+                <h3 className="font-display text-2xl text-ink">
+                  {project.name}
+                </h3>
+              </div>
+
+              <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                {project.description}
+              </p>
 
               <ul className="mt-5 flex-1 space-y-2.5">
                 {project.highlights.map((highlight) => (
@@ -120,7 +127,7 @@ export default function Projects() {
                 ))}
               </ul>
 
-              <p className="mt-6 border-t border-ink/10 pt-4 font-mono text-xs text-ink/40">
+              <p className="mt-6 font-mono text-xs text-ink/40">
                 {project.stack}
               </p>
             </article>
