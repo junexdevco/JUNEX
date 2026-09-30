@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import JunexMark from "@/components/JunexMark";
 
 const NAV_LINKS = [
   { label: "Servicios", href: "#servicios" },
@@ -29,10 +28,9 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto grid max-w-6xl grid-cols-2 items-center gap-4 px-6 py-4 md:grid-cols-[minmax(min-content,14rem)_auto_minmax(min-content,18rem)]">
-        <a href="#top" className="flex items-center">
-          <JunexMark className="h-7 w-6 -mr-0.5" />
+        <a href="#top" className="flex items-center gap-2">
           <span className="font-display text-2xl tracking-wide text-ink">
-            UNEX
+            JUNEX
           </span>
         </a>
 

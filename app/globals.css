@@ -81,22 +81,3 @@ body {
     animation: none;
   }
 }
-
-@keyframes flow-dash-sm {
-  from {
-    stroke-dashoffset: 40;
-  }
-  to {
-    stroke-dashoffset: -40;
-  }
-}
-
-.animate-flow-sm {
-  animation: flow-dash-sm 2.2s linear infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-flow-sm {
-    animation: none;
-  }
-}
