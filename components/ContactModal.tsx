@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
-const WHATSAPP_URL = "https://wa.me/qr/JOX2EIKCEJQEG1";
+const WHATSAPP_URL = "https://wa.me/573106663472";
 
 export default function ContactModal({
   open,
