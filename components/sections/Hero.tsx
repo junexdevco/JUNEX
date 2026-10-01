@@ -20,11 +20,11 @@ export default function Hero() {
           <FloatingNode type="phone" className="right-0 top-2 flex" />
           <FloatingNode
             type="chip"
-            className="left-2 top-163.5 z-10 flex -translate-y-1/2 sm:-left-6 sm:top-116 lg:-left-16"
+            className="left-2 top-171.5 z-10 flex -translate-y-1/2 sm:-left-6 sm:top-116 lg:-left-16"
           />
           <FloatingNode
             type="server"
-            className="right-2 top-163.5 z-10 flex -translate-y-1/2 sm:-right-6 sm:top-116 lg:-right-16"
+            className="right-2 top-171.5 z-10 flex -translate-y-1/2 sm:-right-6 sm:top-116 lg:-right-16"
           />
 
           <div className="flex flex-col items-center text-center">
@@ -62,7 +62,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="relative mt-20 flex w-full justify-center">
+            <div className="relative mt-28 flex w-full justify-center">
               <DeployTerminal />
             </div>
           </div>

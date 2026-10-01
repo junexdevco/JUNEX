@@ -12,9 +12,9 @@ const DESKTOP_PATHS = [
 
 const MOBILE_PATHS = [
   // chip (abajo-izq) -> celular (arriba-der)
-  "M 28 654 C 150 654, 200 340, 307 28",
+  "M 28 686 C 150 686, 200 360, 307 28",
   // laptop (arriba-izq) -> servidor (abajo-der)
-  "M 20 28 C 150 28, 200 340, 299 654",
+  "M 20 28 C 150 28, 200 360, 299 686",
 ];
 
 function Paths({ paths }: { paths: string[] }) {
@@ -43,7 +43,7 @@ export default function ConnectorLine({ className }: { className?: string }) {
   return (
     <>
       <svg
-        viewBox="0 0 330 1039"
+        viewBox="0 0 330 1076"
         preserveAspectRatio="none"
         className={`pointer-events-none absolute inset-0 block h-full w-full text-accent sm:hidden ${className ?? ""}`}
         aria-hidden="true"

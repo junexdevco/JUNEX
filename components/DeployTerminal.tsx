@@ -25,7 +25,7 @@ export default function DeployTerminal() {
         <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
       </div>
-      <pre className="overflow-x-auto px-5 py-5 font-mono text-[12.5px] leading-relaxed text-paper/80">
+      <pre className="overflow-x-auto whitespace-pre-wrap wrap-break-word px-4 py-4 font-mono text-[11px] leading-relaxed text-paper/80 sm:whitespace-pre sm:wrap-normal sm:px-5 sm:py-5 sm:text-[12.5px]">
         {LINES.map((line, i) => (
           <div
             key={i}
