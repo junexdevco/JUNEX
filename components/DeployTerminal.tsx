@@ -19,7 +19,7 @@ const LINES: { text: string; tone?: "comment" | "success" | "accent" }[] = [
 
 export default function DeployTerminal() {
   return (
-    <div className="w-full max-w-lg overflow-hidden rounded-xl border border-black/10 bg-[#161616] text-left shadow-[0_20px_60px_-20px_rgba(0,0,0,0.4)]">
+    <div className="w-full min-w-0 max-w-lg overflow-hidden rounded-xl border border-black/10 bg-[#161616] text-left shadow-[0_20px_60px_-20px_rgba(0,0,0,0.4)]">
       <div className="flex items-center gap-1.5 bg-black px-4 py-3">
         <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />

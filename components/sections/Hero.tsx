@@ -62,7 +62,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="relative mt-20 flex justify-center">
+            <div className="relative mt-20 flex w-full justify-center">
               <DeployTerminal />
             </div>
           </div>
