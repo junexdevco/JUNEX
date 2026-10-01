@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 export default function AdminLoginModal({
   open,
@@ -11,6 +12,12 @@ export default function AdminLoginModal({
 }) {
   const [token, setToken] = useState("");
   const [attempted, setAttempted] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- detecta montaje en cliente para el portal, sin alternativa sin efecto
+    setMounted(true);
+  }, []);
 
   const handleClose = () => {
     setToken("");
@@ -29,9 +36,9 @@ export default function AdminLoginModal({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
-  if (!open) return null;
+  if (!open || !mounted) return null;
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/60 px-6 backdrop-blur-sm"
       role="dialog"
@@ -105,6 +112,7 @@ export default function AdminLoginModal({
           </div>
         </form>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
