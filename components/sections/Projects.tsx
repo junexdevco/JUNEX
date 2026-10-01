@@ -133,7 +133,7 @@ export default function Projects() {
                 {project.stack}
               </p>
 
-              {project.presentationUrl && (
+              {project.presentationUrl ? (
                 <a
                   href={project.presentationUrl}
                   target="_blank"
@@ -143,6 +143,17 @@ export default function Projects() {
                   Ver presentación
                   <span aria-hidden="true">→</span>
                 </a>
+              ) : (
+                // Aún sin presentación: mismo botón, sin acción. Al agregar
+                // presentationUrl al proyecto se activa solo.
+                <button
+                  type="button"
+                  disabled
+                  className="mt-5 inline-flex w-fit cursor-default items-center gap-2 rounded-full bg-ink px-5 py-2.5 font-mono text-sm text-paper"
+                >
+                  Ver presentación
+                  <span aria-hidden="true">→</span>
+                </button>
               )}
             </article>
           ))}
