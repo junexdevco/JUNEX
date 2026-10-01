@@ -58,7 +58,9 @@ export default function Typewriter({ words }: { words: string[] }) {
 
   return (
     <span className="inline-flex items-baseline">
-      <span>{text}</span>
+      <span className="underline decoration-accent decoration-4 underline-offset-4">
+        {text}
+      </span>
       <span
         aria-hidden="true"
         className="ml-1 inline-block h-[0.85em] w-[0.08em] animate-pulse bg-accent align-[-0.05em]"
