@@ -7,6 +7,7 @@ type Project = {
   description: string;
   highlights: string[];
   stack: string;
+  presentationUrl?: string;
 };
 
 const PROJECTS: (Project & { tag: string })[] = [
@@ -23,6 +24,7 @@ const PROJECTS: (Project & { tag: string })[] = [
       "App móvil en React Native/Expo con GPS, facturas en PDF y notificaciones",
     ],
     stack: "Node.js · MongoDB · React · React Native",
+    presentationUrl: "/presentaciones/aquarural.html",
   },
   {
     tag: "02",
@@ -130,6 +132,18 @@ export default function Projects() {
               <p className="mt-6 font-mono text-xs text-ink/40">
                 {project.stack}
               </p>
+
+              {project.presentationUrl && (
+                <a
+                  href={project.presentationUrl}
+                  target="_blank"
+                  rel="noopener"
+                  className="mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-ink px-5 py-2.5 font-mono text-sm text-paper transition-transform hover:-translate-y-0.5"
+                >
+                  Ver presentación
+                  <span aria-hidden="true">→</span>
+                </a>
+              )}
             </article>
           ))}
         </div>
