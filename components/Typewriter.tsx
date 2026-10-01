@@ -61,7 +61,7 @@ export default function Typewriter({ words }: { words: string[] }) {
       <span>{text}</span>
       <span
         aria-hidden="true"
-        className="ml-1 inline-block h-[0.85em] w-[0.08em] animate-pulse bg-ink align-[-0.05em]"
+        className="ml-1 inline-block h-[0.85em] w-[0.08em] animate-pulse bg-accent align-[-0.05em]"
       />
     </span>
   );

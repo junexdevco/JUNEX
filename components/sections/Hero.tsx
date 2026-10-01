@@ -36,7 +36,7 @@ export default function Hero() {
               Construimos el software
               <br />
               que tu negocio{" "}
-              <span className="inline-block translate-y-[0.1em] bg-accent px-2 py-1 leading-[0.95] text-ink">
+              <span className="inline-block text-accent">
                 <Typewriter words={ROTATING_WORDS} />
               </span>
             </h1>
