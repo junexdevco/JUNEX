@@ -43,7 +43,7 @@ export default function Hero() {
 
             <p className="mt-8 max-w-2xl text-lg text-ink/70 sm:text-xl">
               JUNEX diseña, desarrolla y despliega productos digitales a la
-              medida — desde el primer prototipo hasta una infraestructura
+              medida, desde el primer prototipo hasta una infraestructura
               que escala sin fricción.
             </p>
 
