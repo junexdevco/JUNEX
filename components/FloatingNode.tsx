@@ -9,7 +9,7 @@ export default function FloatingNode({
 }) {
   return (
     <div
-      className={`absolute flex h-14 w-14 items-center justify-center rounded-2xl border border-ink/10 bg-paper shadow-[0_8px_24px_-8px_rgba(0,0,0,0.25)] ${className ?? ""}`}
+      className={`absolute flex h-10 w-10 items-center justify-center rounded-xl border border-ink/10 bg-paper shadow-[0_8px_24px_-8px_rgba(0,0,0,0.25)] sm:h-14 sm:w-14 sm:rounded-2xl ${className ?? ""}`}
       aria-hidden="true"
     >
       <NodeIcon type={type} />

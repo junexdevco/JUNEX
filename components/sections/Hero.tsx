@@ -16,19 +16,19 @@ export default function Hero() {
       <div className="relative mx-auto max-w-5xl px-6 pb-20 pt-28 sm:pt-36">
         <div className="relative">
           <ConnectorLine />
-          <FloatingNode type="laptop" className="left-0 top-2 hidden sm:flex" />
-          <FloatingNode type="phone" className="right-0 top-2 hidden sm:flex" />
+          <FloatingNode type="laptop" className="left-0 top-2 flex" />
+          <FloatingNode type="phone" className="right-0 top-2 flex" />
           <FloatingNode
             type="chip"
-            className="-left-6 top-116 hidden -translate-y-1/2 sm:flex lg:-left-16"
+            className="left-2 top-163.5 z-10 flex -translate-y-1/2 sm:-left-6 sm:top-116 lg:-left-16"
           />
           <FloatingNode
             type="server"
-            className="-right-6 top-116 hidden -translate-y-1/2 sm:flex lg:-right-16"
+            className="right-2 top-163.5 z-10 flex -translate-y-1/2 sm:-right-6 sm:top-116 lg:-right-16"
           />
 
           <div className="flex flex-col items-center text-center">
-            <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-ink/15 bg-paper-soft px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-ink/70">
+            <span className="mb-6 inline-flex max-w-50 items-center gap-2 rounded-full border border-ink/15 bg-paper-soft px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-ink/70 sm:max-w-none">
               Software a medida · Infraestructura lista para producción
             </span>
 
