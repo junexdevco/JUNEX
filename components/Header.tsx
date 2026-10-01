@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import AdminLoginModal from "@/components/AdminLoginModal";
+import ContactModal from "@/components/ContactModal";
 
 const NAV_LINKS = [
   { label: "Servicios", href: "#servicios" },
@@ -14,6 +15,7 @@ const NAV_LINKS = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -57,16 +59,18 @@ export default function Header() {
           >
             Iniciar sesión
           </button>
-          <a
-            href="#contacto"
+          <button
+            type="button"
+            onClick={() => setContactOpen(true)}
             className="flex items-center whitespace-nowrap rounded-full bg-ink px-4 py-2 font-mono text-sm text-paper transition-colors hover:bg-ink-soft"
           >
             Hablemos
-          </a>
+          </button>
         </div>
       </div>
 
       <AdminLoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </header>
   );
 }

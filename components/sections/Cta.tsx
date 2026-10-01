@@ -1,4 +1,11 @@
+"use client";
+
+import { useState } from "react";
+import ContactModal from "@/components/ContactModal";
+
 export default function Cta() {
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <section
       id="contacto"
@@ -16,12 +23,13 @@ export default function Cta() {
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href="mailto:hola@junex.dev"
+          <button
+            type="button"
+            onClick={() => setContactOpen(true)}
             className="rounded-full bg-accent px-7 py-3 font-mono text-sm text-ink transition-transform hover:-translate-y-0.5"
           >
             Escribir a JUNEX
-          </a>
+          </button>
           <a
             href="#servicios"
             className="rounded-full border border-paper/20 px-7 py-3 font-mono text-sm text-paper transition-colors hover:border-paper/50"
@@ -30,6 +38,8 @@ export default function Cta() {
           </a>
         </div>
       </div>
+
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </section>
   );
 }
